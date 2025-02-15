@@ -26,6 +26,39 @@ const router = createRouter({
         title: '组件市场',
       },
       component: () => import('@/views/Materials/index.vue'),
+      redirect: '/select-group',
+      children: [
+        {
+          path: '/select-group',
+          name: 'select-group',
+          component: () => import('@/views/Materials/SelectGroupView.vue'),
+        },
+        {
+          path: '/input-group',
+          name: 'input-group',
+          component: () => import('@/views/Materials/InputGroupView.vue'),
+        },
+        {
+          path: '/advanced-group',
+          name: 'advanced-group',
+          component: () => import('@/views/Materials/AdvancedGroupView.vue'),
+        },
+        {
+          path: '/note-group',
+          name: 'note-group',
+          component: () => import('@/views/Materials/NoteGroupView.vue'),
+        },
+        {
+          path: '/personal-info-group',
+          name: 'personal-info-group',
+          component: () => import('@/views/Materials/PersonalInfoGroupView.vue'),
+        },
+        {
+          path: '/contact-group',
+          name: 'contact-group',
+          component: () => import('@/views/Materials/ContactGroupView.vue'),
+        },
+      ],
     },
   ],
 })
